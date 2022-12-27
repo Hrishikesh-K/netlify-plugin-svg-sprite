@@ -47,6 +47,7 @@ export default function(inputs : NetlifyPluginOptions['inputs'], meta? : {
         return previousString + readFileSync(resolve(resolvedInputDir, currentFileName), 'utf-8').replace('<svg', `<symbol id="${currentFileName.slice(0, -4)}"`).replace('</svg', '</symbol')
       }, '')}</svg>`)
     }
+    writeSprites()
     plugin.utils.status.show({
       summary: `SVG sprite created from ${fileNames.length} file(s)`,
       text: `Sprite(s) include:\n${fileNames.join(',\n')}`,
@@ -61,7 +62,6 @@ export default function(inputs : NetlifyPluginOptions['inputs'], meta? : {
         writeSprites()
       })
     }
-    writeSprites()
   }
   if (meta?.events.has('onPreDev')) {
     return {
