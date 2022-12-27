@@ -1,0 +1,6 @@
+name: netlify-plugin-svg-sprite
+inputs:
+  - description: Folder containing SVG files to process
+    name: src
+  - description: Folder to save the output SVG sprite in
+    name: dist

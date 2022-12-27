@@ -1,0 +1,47 @@
+{
+  "author": {
+    "email": "hishi5200@gmail.com",
+    "name": "Hrishikesh Kokate",
+    "url": "https://hkblogfolio.netlify.app/"
+  },
+  "bugs": {
+    "email": "hishi5200@gmail.com",
+    "url": "https://github.com/Hrishikesh-K/netlify-plugin-svg-sprite/issues"
+  },
+  "dependencies": {
+    "chokidar": "3.5.3"
+  },
+  "description": "A Netlify build plugin to generate SVG sprite from a folder containing SVG files.",
+  "devDependencies": {
+    "@netlify/build": "29.3.0",
+    "@types/node": "18.11.18",
+    "typescript": "4.9.4"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "engineStrict": true,
+  "files": [
+    "./dist/"
+  ],
+  "homepage": "https://github.com/Hrishikesh-K/netlify-plugin-svg-sprite#readme",
+  "keywords": [
+    "icons",
+    "netlify",
+    "netlify-plugin",
+    "svg-sprites",
+    "ui"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "name": "netlify-plugin-svg-sprite",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hrishikesh-K/netlify-plugin-svg-sprite.git"
+  },
+  "scripts": {
+    "build": "tsc && cp ./src/manifest.yml ./dist/manifest.yml"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
