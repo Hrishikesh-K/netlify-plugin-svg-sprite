@@ -17,7 +17,7 @@ Add the following to your `netlify.toml` file:
 ```toml
 [[plugins]]
   package = "netlify-plugin-svg-sprite"
-  [plugin.inputs]
+  [plugins.inputs]
     dist = "./dist/"
     src = "./src/icons/"
 ```

@@ -18,7 +18,7 @@ export default function(inputs : NetlifyPluginOptions['inputs'], meta? : {
     if (!inputDir) {
       // noinspection ReuseOfLocalVariableJS
       inputDir = './src/icons'
-      console.warn(`The source directory for icons is not specified. The plugin will fallback to ${inputDir}.\n`)
+      console.warn(`The src directory for icons is not specified. The plugin will fallback to ${inputDir}.\n`)
       // noinspection NestedFunctionCallJS
       if (!existsSync(resolve(workingDir, inputDir))) {
         plugin.utils.build.failPlugin(`${inputDir} does not exist.`)
@@ -27,13 +27,13 @@ export default function(inputs : NetlifyPluginOptions['inputs'], meta? : {
     if (!distDir) {
       // noinspection ReuseOfLocalVariableJS
       distDir = plugin.netlifyConfig.build.publish
-      console.warn(`The source directory for icons is not specified. The plugin will fallback to ${distDir}.\n`)
+      console.warn(`The dist directory for icons is not specified. The plugin will fallback to ${distDir}.\n`)
     }
     const fileNames : Array<string> = []
     const resolvedDistDir = resolve(workingDir, distDir)
     const resolvedInputDir = resolve(workingDir, inputDir)
     if (!existsSync(resolvedDistDir)) {
-      console.warn('The dist directory for sprite is not specified. The plugin will now create it. However, most site generators will delete this diretory before starting a new build. It is recommended to specify a different dist directory in your netlify.toml file.\n')
+      console.warn('The dist directory for sprites was not specified. The plugin will now create it. However, most site generators will delete this diretory before starting a new build. It is recommended to specify a different dist directory in your netlify.toml file.\n')
       mkdirSync(resolvedDistDir)
       console.log(`${distDir} successfully created.\n`)
     }
