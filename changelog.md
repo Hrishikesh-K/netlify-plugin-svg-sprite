@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.3
+### Changed
+- Fixed incorrect warning for non-existent dist directory
+
 ## v1.0.2
 ### Changed
 - Fixed incorrect warning for unset dist directory

@@ -33,7 +33,7 @@ export default function(inputs : NetlifyPluginOptions['inputs'], meta? : {
     const resolvedDistDir = resolve(workingDir, distDir)
     const resolvedInputDir = resolve(workingDir, inputDir)
     if (!existsSync(resolvedDistDir)) {
-      console.warn('The dist directory for sprites was not specified. The plugin will now create it. However, most site generators will delete this diretory before starting a new build. It is recommended to specify a different dist directory in your netlify.toml file.\n')
+      console.warn('The dist directory for sprites does not exist. The plugin will now create it. However, chances are, your site generator or build process will delete this diretory before starting a new build.\n')
       mkdirSync(resolvedDistDir)
       console.log(`${distDir} successfully created.\n`)
     }
